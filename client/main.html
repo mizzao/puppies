@@ -1,0 +1,28 @@
+<head>
+  <title>puppies</title>
+</head>
+
+<body>
+  {{> hello }}
+  {{> info}}
+</body>
+
+<template name="hello">
+  <button>Show {{text}}</button>
+</template>
+
+<template name="info">
+  <div class="container">
+  <div class="row">
+    {{#each images}}
+    {{> image }}
+    {{/each}}
+  </div>
+  </div>
+</template>
+
+<template name="image">
+  <div class="col-md-4 well">
+    <img class="{{favClass}}" src="{{url}}" width="300">
+  </div>
+</template>
